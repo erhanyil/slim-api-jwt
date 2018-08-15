@@ -41,12 +41,4 @@ $app->group('/v1', function (\Slim\App $app) {
     
     $this->group('/auth', function () {new AuthController($this);});
     $this->group('/user', function ($c) {new UserController($this);});
-
-    $app->get('/todo', function ($request, $response, $args) {
-        print_r($this->db);
-        // $sth = $this->db->prepare("SELECT * FROM users");
-        // $sth->execute();
-        // $todos = $sth->fetchObject();
-        // return $this->response->withJson($todos);
-    });
 });
